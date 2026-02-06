@@ -1,4 +1,6 @@
-package javademo.collections;
+package javademo.collections.arraylists;
+
+import javademo.collections.Employee;
 
 import java.util.Comparator;
 
