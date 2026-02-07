@@ -1,67 +1,109 @@
 fun main() {
 
+    /**
+     * There are two main difference between the scope functions
+     * 1. The way to refer to the context object-> either this or it
+     * 2. The return value -> Either return context object or the lambda result
+     */
     // let, run , with, apply , also
 
-    var name: String? = null
-    name = "Ashish"
+    /** Scope function 'with'->
+     * Property 1: Refer to context object(receiver = person) by using 'this'
+     * Property 2: The return value is the 'lambda result'
+     */
+    val person = Person()
+    val modifiedAge: Int = with(person) {
+        name = "Manwal"
+        age = 20
 
-    val myList = mutableListOf("Ashish", "Manwal", "Silawar")
-    myList.apply {
+        age + 5 // last expression will return
     }
 
-    myList?.also {
-        it.add("Ashish")
+    println("After five years: $modifiedAge")
+
+    /** Scope function 'apply'->
+     * Property 1: Refer to context object by using 'this'
+     * Property 2: The return value is the 'context object'
+     */
+
+    val person1 = Person().apply {
+        name = "Jane"
+        age = 18
+    }
+    // for print
+    with(person1) {
+        println(name)
+        println(age)
     }
 
-    // 1. let
-    var person = Person("Ashish", 20)
-    person.let {
-        println(it)
-        it.name = "let: Ashish"
-        it.age = 21
+    person1.also {
+        it.name = "Bob"
+        println("New Name: ${it.name}")
     }
 
-    println(person)
+    /** Scope function 'apply'->
+     * Property 1: Refer to context object by using 'it'
+     * Property 2: The return value is the 'context object'
+     */
 
-    // 2. also
-    person.also {
-        it.name = "also: Ashish"
-        it.age = 22
+    val numbersList = mutableListOf(1, 2, 3, 4, 5)
+
+    val duplicateNumbers = numbersList.also {
+        println("First Element: ${it.first()}")
+        it.add(6)
+        println("After adding: $it")
+        it.remove(2)
+        println("Removed: $it")
+    }
+    println(numbersList)
+    println(duplicateNumbers)
+
+
+    /** Scope function 'apply'->
+     * Property 1: Refer to context object by using 'it'
+     * Property 2: The return value is the 'lambda result'
+     * Use let function to avoid NullPointerException
+     */
+
+    val name = "Hello"
+
+    val length = name.let {
+        println(name)
+        println(it.reversed())
+        println(it.length)
+
+        it.length // return this statement
     }
 
-    println(person)
+    println(length)
 
-    // 3. apply
-    person.apply {
-        name = "apply: Ashish"
-        age = 23
+    /** Scope function 'apply'->
+     * Property 1: Refer to context object by using 'this'
+     * Property 2: The return value is the 'lambda result'
+     * combination of "let" and "with"
+     */
+
+    val person2 = Person()
+    val bio = person2.run {
+        println(name)
+        println(age)
+        "we are returning this"
     }
+    println(bio)
 
-    println(person)
-
-    // 4. run
-    person.run {
-        age = 24
-        name = "run: Ashish"
-    }
-
-    println(person)
-
-    // 5. with
-    with(person) {
-        person = Person("Ashish", 20)
-        age = 25
-        name = "with: Ashish"
-    }
-
-    println(person)
-
-    print(factorial(5, 1))
-
+    /**
+     * Summary
+     * with: If you want to operate on non-null object
+     * let: If you want to just execute lambda expression on a nullable object and avoid NullPointerException
+     * run: If you want to operate on a nullable object, execute lambda expression and avoid NullPointerException (with + let)
+     * apply: If you want to initialize or configure an object
+     * also: If you want to do some additional object configuration or operations
+     */
 }
 
-tailrec fun factorial(n: Int, acc: Int = 1): Int {
-    return if (n == 0) acc else factorial(n - 1, acc * n)
-}
 
-data class Person(var name: String, var age: Int)
+class Person {
+
+    var name: String = ""
+    var age: Int = 0
+}

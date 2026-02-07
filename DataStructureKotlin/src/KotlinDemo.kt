@@ -22,8 +22,8 @@ fun main() {
     val name = "Ashish"
     val charArray = name.toCharArray()
 
-    for(i in charArray.indices){
-        when(charArray[i]){
+    for (i in charArray.indices) {
+        when (charArray[i]) {
             'A' -> print("A")
             'B' -> print("B")
             'h' -> print("h")

@@ -13,7 +13,7 @@ import java.io.ObjectInputFilter
 fun main() {
 
     // Global Scope -> Dis.Default
-    // Coroutine Scope -> Any
+    // Coroutine Scope -> Any (customizable)
     // MainScope - Dis.MAIN
 
 
@@ -63,37 +63,4 @@ fun main() {
     * If you call runBlocking while on the Main Thread, it runs on the Main Thread and blocks it.
     * If you call it on an IO Thread, it blocks that specific IO Thread.
     */
-    runBlocking {
-        performTask2()
-    }
-}
-
-suspend fun performTask(): String {
-
-    delay(1000)
-
-    return "function works..."
-}
-
-suspend fun performTask2(): String {
-    coroutineScope {
-
-        val result = withContext(Dispatchers.IO) {
-            delay(1000)
-            "function works..."
-        }
-        val job = launch {
-            println("Launching function...")
-        }
-
-        val def = async {
-            println("Async function...")
-        }
-
-        println(result)
-    }
-
-    println("performTask2->")
-
-    return "function works..."
 }
