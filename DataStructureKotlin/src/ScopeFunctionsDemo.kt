@@ -1,13 +1,14 @@
 fun main() {
 
     /**
+     *
      * There are two main difference between the scope functions
      * 1. The way to refer to the context object-> either this or it
      * 2. The return value -> Either return context object or the lambda result
      */
     // let, run , with, apply , also
 
-    /** Scope function 'with'->
+    /** Scope function 'with' ->
      * Property 1: Refer to context object(receiver = person) by using 'this'
      * Property 2: The return value is the 'lambda result'
      */
@@ -21,7 +22,7 @@ fun main() {
 
     println("After five years: $modifiedAge")
 
-    /** Scope function 'apply'->
+    /** Scope function 'apply' ->
      * Property 1: Refer to context object by using 'this'
      * Property 2: The return value is the 'context object'
      */
@@ -41,7 +42,7 @@ fun main() {
         println("New Name: ${it.name}")
     }
 
-    /** Scope function 'apply'->
+    /** Scope function 'apply' ->
      * Property 1: Refer to context object by using 'it'
      * Property 2: The return value is the 'context object'
      */
@@ -59,7 +60,7 @@ fun main() {
     println(duplicateNumbers)
 
 
-    /** Scope function 'apply'->
+    /** Scope function 'apply' ->
      * Property 1: Refer to context object by using 'it'
      * Property 2: The return value is the 'lambda result'
      * Use let function to avoid NullPointerException
@@ -77,7 +78,7 @@ fun main() {
 
     println(length)
 
-    /** Scope function 'apply'->
+    /** Scope function 'apply' ->
      * Property 1: Refer to context object by using 'this'
      * Property 2: The return value is the 'lambda result'
      * combination of "let" and "with"
