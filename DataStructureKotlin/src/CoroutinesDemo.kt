@@ -41,11 +41,19 @@ fun main() {
 
     runBlocking {
         println("Hello, World!")
+        println("runBlocking-Scope: $this") // BlockingCoroutine
         val job = launch {
             //val data = performTask()
             delay(1000L)
             //println(data)
             println("World!")
+
+            println("launch-Scope: $this") // StandaloneCoroutine
+        }
+
+        val def = async {
+            delay(1000L)
+            println("async-Scope: $this") // DeferredCoroutine
         }
 
         job.join()

@@ -25,7 +25,7 @@ fun main() = runBlocking {
 
     //val time = measureTimeMillis {
         // 2. using async both functions will run parallel (concurrency)
-        // async(start = CoroutineStart.LAZY): Will not execute if we are not using the result
+        // async(start = CoroutineStart.LAZY): Will not execute until we use the result
         val msgOne : Deferred<String> = async(start = CoroutineStart.LAZY) {
             getMessageOne()
         }
