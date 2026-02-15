@@ -1,0 +1,60 @@
+
+Kotlin Language-
+-> Kotlin vs Java
+-> val vs var
+-> lateinit vs lazy initialization
+
+-> Nullability Handling: Safe calls, elvis operator, safe cast, non-null assertion
+-> Scope functions (let, apply, also, run, with)
+-> Extension function
+-> Higher order function
+-> inline function
+-> infix function
+-> Tail recursive function
+-> Coroutines
+    - Scope : GlobalScope, CoroutineScope, MainScope, lifecycleScope, viewModelScope
+    - Dispatchers : Main, IO, Default, Unconfined
+    - Builders : launch{}, async{}, runBlocking{}
+    - Suspend function/keyword :  yield(), delay() : withContext(Dispatechers.IO)
+    - supervisorJob, supervisorScope
+    - error handling
+    - withTimeout(), withTimeoutOrNull()
+-> data class
+-> value classes
+-> sealed class with 'when'
+-> object
+-> enum
+-> companion object
+-> reified modifier
+-> delegates
+-> init block vs primary constructor
+-> Generics
+-> Invariance, covariance and contravariance
+-> Difference between '==' and '==='
+-> destructuring
+-> downTo and 'until' keyword
+-> inline, crossline and noinline keywords
+-> Visibility modifiers: internal, protected, private, public
+-> synchronized keyword
+
+Android:
+-> Activity/Fragment Lifecycle based questions
+-> Jetpack Compose (effects, composition)
+-> SQLite and Room Database (Type Converters, Migration)
+-> SharedPreferences, DataStore
+-> Intent
+-> Intent Filter
+-> Broadcast Receivers
+-> Service
+-> Intent Service
+-> Dependency Injection (Hilt, Koin)
+-> ViewModel (config changes scenarios), ViewModelFactory, ViewModelProvider
+-> Repository Pattern
+-> LiveData
+-> Flow (Cold, Hot)
+-> Retrofit, Interceptor
+-> WorkManager
+-> Best security practices
+-> Architecture Patterns: MVC, MVP, MVVM and Clean Architecture
+-> Design Patterns: Singleton, Factory, Repository, Builder
+->

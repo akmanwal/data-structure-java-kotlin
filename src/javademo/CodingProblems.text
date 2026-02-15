@@ -1,0 +1,31 @@
+
+Array-
+1. Sort an array
+2. Find Max and Min
+3. Remove duplicates (sorted and unsorted)
+4. Merge Sorted Arrays: Combine two sorted arrays into a single sorted array without using Arrays.sort().
+5. Array reverse
+6. Find the Duplicate: Given an array of integers, find the first recurring number.
+7. Merge Arrays
+
+
+Logic and Maths-
+1. Palindrome of a number
+2. Prime number
+3. Armstrong
+4. Two sum: Given an array and a target integer, return indices of the two numbers that add up to the target. Use a HashMap for $O(n)$ efficiency.
+5 Fibonacci Series: Write a function to return the $n^{th}$ number using Memoization (to avoid $O(2^n)$ complexity)
+6. Factorial: Solve using recursion vs. iteration.
+7. FizzBuzz (The Clean Way): Write it without using redundant if checks for the "15" case.
+8. Swap two numbers without a third variable
+9. Sum of digits
+
+String-
+1. Palindrome of string
+2. Anagram Check: Determine if two strings contain the same characters in a different order.
+3.Count the occurrence of each character:
+
+Data Structures:
+1. Singly Linked List: Write a method to reverse it in place.
+2. Stack Implementation: Build a Stack using an Array or Linked List with push(), pop(), and peek() methods.
+3. Binary Search: Implement the algorithm recursively and iteratively.
