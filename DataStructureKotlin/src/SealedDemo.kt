@@ -12,5 +12,6 @@ fun getArea(shape: Shape): Int {
     return when (shape) {
         is Shape.Rectangle -> shape.width * shape.height
         is Shape.Square -> shape.width * shape.height
+        else -> {0}
     }
 }

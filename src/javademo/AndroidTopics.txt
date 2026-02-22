@@ -4,7 +4,7 @@ Kotlin Language-
 -> val vs var
 -> lateinit vs lazy initialization
 
--> Nullability Handling: Safe calls, elvis operator, safe cast, non-null assertion
+-> Nullability Handling: Safe calls, elves operator, safe cast, non-null assertion
 -> Scope functions (let, apply, also, run, with)
 -> Extension function
 -> Higher order function
@@ -32,7 +32,7 @@ Kotlin Language-
 -> Invariance, covariance and contravariance
 -> Difference between '==' and '==='
 -> destructuring
--> downTo and 'until' keyword
+-> downTo and 'until' keyword, Range '..' operator
 -> inline, crossline and noinline keywords
 -> Visibility modifiers: internal, protected, private, public
 -> synchronized keyword
@@ -56,5 +56,4 @@ Android:
 -> WorkManager
 -> Best security practices
 -> Architecture Patterns: MVC, MVP, MVVM and Clean Architecture
--> Design Patterns: Singleton, Factory, Repository, Builder
-->
+-> Design Patterns: Singleton, Factory, Repository, Builder, ViewHolder
