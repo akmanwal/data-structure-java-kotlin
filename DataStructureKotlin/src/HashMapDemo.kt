@@ -1,5 +1,4 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 fun main() {
     val map1 = mutableMapOf("Apple" to 1, "Orange" to 2, "Guava" to 3, "Grapes" to 4)
     val map2 = mutableMapOf("Ball" to 1, "Table" to 2, "Guava" to 3, "Grapes" to 4)
