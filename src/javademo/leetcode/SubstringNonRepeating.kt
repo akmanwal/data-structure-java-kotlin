@@ -8,7 +8,6 @@ fun main() {
 
 fun lengthOfLongestSubstring(string: String): MutableList<String> {
 
-
     val stringArray = mutableListOf<String>()
 
     for (left in 0 until string.length) {
