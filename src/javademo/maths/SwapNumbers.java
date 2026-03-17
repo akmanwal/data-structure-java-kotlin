@@ -1,4 +1,4 @@
-package javademo.collections;
+package javademo.maths;
 
 public class SwapNumbers {
 
