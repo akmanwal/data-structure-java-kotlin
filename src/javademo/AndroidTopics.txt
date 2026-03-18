@@ -6,7 +6,7 @@ Kotlin Language-
 
 -> Nullability Handling: Safe calls, elves operator, safe cast, non-null assertion
 -> Scope functions (let, apply, also, run, with)
--> Extension function
+-> Extension function (Internal Working)
 -> Higher order function
 -> inline function
 -> infix function
@@ -24,7 +24,9 @@ Kotlin Language-
 -> sealed class with 'when'
 -> object
 -> enum
+-> open
 -> companion object
+-> Singleton (using object, companion object)
 -> reified modifier
 -> delegates
 -> init block vs primary constructor
@@ -38,12 +40,13 @@ Kotlin Language-
 -> synchronized keyword
 
 Android:
--> Activity/Fragment Lifecycle based questions
+-> Activity/Fragment Lifecycle based questions (LMK- Process Death Phenomenon)
 -> Jetpack Compose (effects, composition)
 -> SQLite and Room Database (Type Converters, Migration)
 -> SharedPreferences, DataStore
 -> Intent
 -> Intent Filter
+-> Pending Intent
 -> Broadcast Receivers
 -> Service
 -> Intent Service
@@ -51,9 +54,16 @@ Android:
 -> ViewModel (config changes scenarios), ViewModelFactory, ViewModelProvider
 -> Repository Pattern
 -> LiveData
--> Flow (Cold, Hot)
+-> Flow (Cold, Hot) [Intermediates-> debounce[used in search bar], map, filter, flatMapLatest(call server)] vs LiveData
 -> Retrofit, Interceptor
 -> WorkManager
--> Best security practices
+-> Best security practices (API Key, Token, R8/Proguard)
+-> Memory Leak
 -> Architecture Patterns: MVC, MVP, MVVM and Clean Architecture
 -> Design Patterns: Singleton, Factory, Repository, Builder, ViewHolder
+-> SOLID Principles
+-> SDLC
+-> ANR
+-> Code Review/Quality Tools
+-> CI/CD
+-> Unit Testing

@@ -1,10 +1,9 @@
-package javademo.collections.arrays
-
-import kotlin.math.max
+package javademo.leetcode
 
 fun main() {
 
-    val array = intArrayOf(0, 18, 15, 17, 20)
+    val array = arrayOf(0, 18, 15, 17, 20)
+    array.sort()
     var largest = 0
     var secondLargest = 0
 
